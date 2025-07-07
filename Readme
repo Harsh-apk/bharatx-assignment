@@ -1,0 +1,8 @@
+use this to run the tool 
+
+docker build -t bharatx-scraper .
+docker run -p 5001:5001 --rm bharatx-scraper
+
+and this to test it :
+
+curl "http://127.0.0.1:5001/search?product_name=lipstick&location=us"
