@@ -1,8 +1,12 @@
-use this to run the tool 
+download the chrome driver - the version should match with the version of chrome on your desktop.
 
-docker build -t bharatx-scraper .
-docker run -p 5001:5001 --rm bharatx-scraper
+here you can find the chrome driver download page : https://googlechromelabs.github.io/chrome-for-testing/
+Note : extract the zip in the folder : bharatx/chromedriver-mac-arm64
 
-and this to test it :
+then activate virtual environment : ```source venv/bin/activate```
 
-curl "http://127.0.0.1:5001/search?product_name=lipstick&location=us"
+download all dependencies using:  ```pip install -r requirements.txt```
+
+then turn on the server : ```python scrape.py```
+
+then : ```curl "http://127.0.0.1:5001/search?product_name=lipstick&location=us"```
